@@ -1,0 +1,77 @@
+https://172.22.1.143:7443/jhtpp/ebix/services/UnderwritingActionUpdate
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" soap:mustUnderstand="1">
+         <wsu:Timestamp wsu:Id="TS-2">
+            <wsu:Created>2022-01-05T17:25:00.000Z</wsu:Created>
+            <wsu:Expires>2022-12-30T23:00:00.000Z</wsu:Expires>
+         </wsu:Timestamp>
+         <wsse:UsernameToken wsu:Id="UsernameToken-1">
+            <wsse:Username>wss40dsa</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">TPP$429A</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">tNWS+iY+xXdOxc5ayy657A==</wsse:Nonce>
+            <wsu:Created>2018-11-09T12:29:47.374Z</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soap:Header>
+   <soap:Body>
+<TXLife xmlns="http://ACORD.org/Standards/Life/2">
+  <TXLifeRequest>
+    <TransRefGUID>hfghfkjghj</TransRefGUID>
+    <TransType tc="151">Updated Underwriting Score</TransType>
+    <TransExeDate>2021-11-11</TransExeDate>
+    <TransExeTime>18:46:44Z</TransExeTime>
+    <OLifE>
+      <SourceInfo>
+        <SourceInfoName>JHADE</SourceInfoName>
+      </SourceInfo>
+      <Holding id="Holding_1">
+        <HoldingTypeCode tc="2">Policy</HoldingTypeCode>
+        <Policy>
+          <PolNumber>96800010</PolNumber>
+          <Life>
+            <Coverage>
+              <LifeParticipant PartyID="Party_1">
+                <TobaccoPremiumBasis tc="1">Non-Smoker</TobaccoPremiumBasis>
+              </LifeParticipant>
+            </Coverage>
+          </Life>
+          <ApplicationInfo>
+            <HOAssignedAppNumber>5144142</HOAssignedAppNumber>
+          </ApplicationInfo>
+        </Policy>
+      </Holding>
+      <Party id="Party_1">
+        <Person>
+          <Gender tc="1">Male</Gender>
+        </Person>
+        <Risk>
+          <TotalInforceIns>0</TotalInforceIns>
+        </Risk>
+      </Party>
+      <FormInstance RelatedObjectID="Holding_1" id="id1">
+        <FormResponse id="FR_1">
+          <QuestionNumber>1</QuestionNumber>
+          <QuestionText>TriagePathNumber</QuestionText>
+          <ResponseText>STP</ResponseText>
+        </FormResponse>
+        <FormResponse id="FR_3">
+          <QuestionNumber>3</QuestionNumber>
+          <QuestionText>ExpressTrackIndicator</QuestionText>
+          <ResponseText>True</ResponseText>
+        </FormResponse>
+      </FormInstance>
+      <FormInstance RelatedObjectID="Party_1" id="id2">
+        <FormResponse id="FR_2">
+          <QuestionNumber>2</QuestionNumber>
+          <QuestionText>Post Issue APS Candidate</QuestionText>
+          <ResponseText>False</ResponseText>
+        </FormResponse>
+      </FormInstance>
+    </OLifE>
+  </TXLifeRequest>
+</TXLife>
+</soap:Body>
+</soap:Envelope>
